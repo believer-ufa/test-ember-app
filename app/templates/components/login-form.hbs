@@ -1,0 +1,32 @@
+{{! login form; the fields must be named "identification" and "password"; the controller action is "authenticate" }}
+
+<div class="row align-center">
+  <div class="col col-6">
+
+    <form {{action 'authenticateWithOAuth2' on='submit'}}>
+
+      <fieldset>
+          <div class="form-item">
+              <label for="identification">Логин (правильный: "letme")</label>
+              {{input value=identification placeholder='Введите логин' }}
+          </div>
+          <div class="form-item">
+              <label for="password">Пароль (правильный: "in")</label>
+              {{input value=password placeholder='Enter Password' type='password'}}
+          </div>
+          <div class="form-item">
+            <button type="submit">Авторизация</button>
+          </div>
+      </fieldset>
+
+    </form>
+    {{#if errorMessage}}
+      <div class="alert alert-danger">
+        <p>
+          <strong>Login failed:</strong> <code>{{errorMessage}}</code>
+        </p>
+      </div>
+    {{/if}}
+
+  </div>
+</div>

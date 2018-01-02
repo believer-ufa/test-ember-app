@@ -1,0 +1,9 @@
+<div class="header-container">
+  {{#link-to "index"}}Главная{{/link-to}}
+  {{#if session.isAuthenticated}}
+    {{#link-to "feed"}}Лента новостей{{/link-to}}
+    <a {{action 'logout'}} href="#">Выйти</a>
+  {{else}}
+    {{#link-to "login"}}Авторизация{{/link-to}}
+  {{/if}}
+</div>

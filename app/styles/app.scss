@@ -1,0 +1,54 @@
+@import "../../node_modules/imperavi-kube/src/kube.scss";
+
+#app {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-transform: uppercase;
+  padding: 10px 0;
+  
+  a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color .3s ease;
+
+    & + a {
+      margin-left: 15px;
+    }
+  
+    &.active, &:hover {
+      color: #444;
+    }
+  }
+}
+
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 25px 0;
+  padding: 15px 0;
+
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  font-weight: normal;
+  font-size: 30px;
+}
+
+.app-description {
+  margin: 25px auto;
+  padding: 15px;
+  max-width: 500px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.page-header {
+  text-align: center;
+  margin: 20px 0;
+}
